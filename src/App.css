@@ -1,0 +1,26 @@
+#root {
+
+	margin: 0 auto;
+	font-family: YS-Regular;
+	text-align: center;
+
+}
+
+@font-face {
+	font-family: "YS-Regular";
+	src: url('../src/assets/fonts/YS-Regular.woff');
+}
+
+@font-face {
+	font-family: 'YandexSans-Bold';
+	src: local('CustomFont Bold'), url('../src/assets/fonts/YS-Bold.woff'), format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'YS-Light';
+	src: local('YS-Light'), url('../src/assets/fonts/YS-Light.woff'), format('woff');
+	font-weight: normal;
+	font-style: light;
+}

@@ -1,0 +1,51 @@
+.new-cost_controls {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.new-cost_controls label {
+    color: #222;
+    font-weight: 700;
+    display: block;
+}
+
+.new-cost_controls input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+    outline: none;
+}
+
+
+.new-cost_actions {
+    text-align: left;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.popup-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-width: 0;
+    animation: fadeIn 0.5s forwards;
+}
