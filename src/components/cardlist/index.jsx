@@ -4,7 +4,7 @@ import { CostsFilter } from '../costfilter';
 import './styles.css';
 import { CostsDiagram } from '../Costs/CostsDiagram';
 
-export const CardList = ({ items }) => {
+export const CardList = ({ items, onRemoveColor }) => {
     const [selectedYear, setSelectedYear] = React.useState('2024');
 
     const yearChangeHandler = (year) => {
@@ -18,7 +18,7 @@ export const CardList = ({ items }) => {
 
     if (filteredItems.length > 0) {
         cardContent = filteredItems.map((item, id) => (
-            <Card key={id} item={item} />
+            <Card key={id} item={item} onRemoveColor={onRemoveColor} />
         ))
     }
 

@@ -17,7 +17,7 @@ const INITIAL_COST = [
         name: 'Пакеты для мусора',
         amount: 150,
     }, {
-        id: 2,
+        id: 3,
         data: new Date(2024, 3, 10),
         name: 'Билет  Санкт-Петербург',
         amount: 3500,
@@ -31,11 +31,15 @@ function App() {
         setItems(prevState => [...prevState, newItem]);
     };
 
+    const onRemoveColor = (id) => {
+        setItems((prevState) => prevState.filter((item) => item.id !== id));
+    };
+
     return (
         <>
             <Header />
             <NewCost onAddCost={addCostHandler} />
-            <CardList items={items} />
+            <CardList items={items} onRemoveColor={onRemoveColor} />
         </>
     );
 }
