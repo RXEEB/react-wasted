@@ -27,19 +27,21 @@ const INITIAL_COST = [
 
 function App() {
     const [items, setItems] = React.useState(INITIAL_COST)
+    const [searchValue, setSearchValue] = React.useState('')
+
     const addCostHandler = (newItem) => {
         setItems(prevState => [...prevState, newItem]);
     };
 
-    const onRemoveColor = (id) => {
+    const onRemoveItems = (id) => {
         setItems((prevState) => prevState.filter((item) => item.id !== id));
     };
 
     return (
         <>
-            <Header />
+            <Header searchValue={searchValue} setSearchValue={setSearchValue} />
             <NewCost onAddCost={addCostHandler} />
-            <CardList items={items} onRemoveColor={onRemoveColor} />
+            <CardList items={items} onRemoveItems={onRemoveItems} searchValue={searchValue} setSearchValue={setSearchValue} />
         </>
     );
 }

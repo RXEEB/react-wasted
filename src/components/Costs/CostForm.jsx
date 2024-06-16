@@ -41,7 +41,7 @@ export const CostForm = ({ onSaveCostData, onCancel }) => {
     };
 
     return (
-        <>
+        <>sadasdas
             <form onSubmit={submitHandler}>
                 <div className='new-cost_controls'>
                     <label>Название</label>
